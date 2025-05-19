@@ -253,13 +253,13 @@ def upload_image(current_user_id, report_id):
         os.makedirs(upload_folder, exist_ok=True)
         
         # Gerar nome de arquivo único
-        filename = secure_filename(file.filename)
+        filename = secure_filename(file.filename) 
         unique_filename = f"{uuid.uuid4()}_{filename}"
         file_path = os.path.join(upload_folder, unique_filename)
         
         # Salvar arquivo
         file.save(file_path)
-        
+         
         # Criar registro no banco de dados
         new_image = ReportImage(
             filename=unique_filename,

@@ -75,7 +75,7 @@ class ReportImage(db.Model):
         return {
             'id': self.id,
             'filename': self.filename,
-            'file_path': self.file_path,
+            'file_path': self.file_path, 
             'created_at': self.created_at.isoformat(),
             'report_id': self.report_id
         }

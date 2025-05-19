@@ -18,3 +18,4 @@ class Config:
     
     # Configuração do Flask
     DEBUG = os.getenv('FLASK_DEBUG', 'False') == 'True'
+ 

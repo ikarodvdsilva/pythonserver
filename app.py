@@ -32,7 +32,7 @@ def create_app():
             'version': '1.0.0',
             'status': 'online'
         }
-    
+     
     return app
 
 if __name__ == '__main__':

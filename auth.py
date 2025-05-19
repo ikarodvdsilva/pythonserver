@@ -63,7 +63,7 @@ def admin_required(f):
         try:
             data = jwt.decode(
                 token, 
-                current_app.config.get('JWT_SECRET_KEY'),
+                current_app.config.get('JWT_SECRET_KEY'), 
                 algorithms=['HS256']
             )
             if data['role'] != 'admin':
